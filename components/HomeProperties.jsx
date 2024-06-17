@@ -1,11 +1,13 @@
-import PorpertyCard from "@/components/PorpertyCard";
+import PropertyCard from "@/components/PropertyCard";
 import Link from "next/link";
 import { fetchProperties } from "@/utils/requests";
 
 const HomeProperties = async () => {
   const data = await fetchProperties();
 
-  const recentProperties = data.properties
+  const totalData = data.properties || [];
+
+  const recentProperties = totalData
     .sort(() => Math.random() - Math.random())
     .slice(0, 3);
 
@@ -21,7 +23,7 @@ const HomeProperties = async () => {
               <p> No properties found </p>
             ) : (
               recentProperties.map((property) => (
-                <PorpertyCard key={property._id} property={property} />
+                <PropertyCard key={property._id} property={property} />
               ))
             )}
           </div>

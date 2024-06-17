@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { FaArrowCircleLeft } from "react-icons/fa";
-import PorpertyCard from "@/components/PorpertyCard";
+import PropertyCard from "@/components/PropertyCard";
 import Spinner from "@/components/Spinner";
 import ProppertySearchFrom from "@/components/ProppertySearchFrom";
 
@@ -64,7 +64,7 @@ const SearchResultsPage = () => {
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {properties.map((property) => (
-                  <PorpertyCard key={property._id} property={property} />
+                  <PropertyCard key={property._id} property={property} />
                 ))}
               </div>
             )}
