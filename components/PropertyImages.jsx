@@ -10,10 +10,10 @@ const PropertyImages = ({ images }) => {
             <Item
               original={images[0]}
               thumbnail={images[0]}
-              width='1000'
-              height='600'
+              width="1000"
+              height="600"
             >
-              {({ref, open}) => (
+              {({ ref, open }) => (
                 <Image
                   ref={ref}
                   onClick={open}
@@ -41,10 +41,10 @@ const PropertyImages = ({ images }) => {
                   <Item
                     original={image}
                     thumbnail={image}
-                    width='1000'
-                    height='600'
+                    width="1000"
+                    height="600"
                   >
-                    {({ref, open}) => (
+                    {({ ref, open }) => (
                       <Image
                         ref={ref}
                         onClick={open}
@@ -55,9 +55,9 @@ const PropertyImages = ({ images }) => {
                         height={0}
                         sizes="100vw"
                         priority={true}
-                    />
+                      />
                     )}
-                </Item>
+                  </Item>
                 </div>
               ))}
             </div>
